@@ -13,6 +13,7 @@ import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import WithSessions from './components/WithSessions';
 import WithAuth from './components/WithAuth';
+import EditUserRecipe from './components/Recipe/EditUserRecipe';
 
 import {
   BrowserRouter as Router,
@@ -56,6 +57,7 @@ const Root = ({ refetch, session }) => (
         <Route path="/search" exact component={Search} />
 
         <Route path="/recipes/:id" exact component={WithAuth(RecipePage)} />
+        <Route path="/edit/:id" exact component={EditUserRecipe} />
 
         <Route path="/login" render={() => <Login refetch={refetch} />} />
         <Route path="/signup" component={Signup} />

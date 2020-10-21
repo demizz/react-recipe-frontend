@@ -36,6 +36,29 @@ export const GET_RECIPE = gql`
     }
   }
 `;
+export const EDIT_RECIPE = gql`
+  mutation(
+    $_id: ID!
+    $name: String!
+    $category: String!
+    $description: String!
+    $imageUrl: String!
+  ) {
+    editRecipe(
+      _id: $_id
+      name: $name
+      description: $description
+      category: $category
+      imageUrl: $imageUrl
+    ) {
+      _id
+      name
+      category
+      description
+      imageUrl
+    }
+  }
+`;
 
 export const SIGNUP_USER = gql`
   mutation($username: String!, $email: String!, $password: String!) {

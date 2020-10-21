@@ -15,6 +15,14 @@ const AddRecipe = (props) => {
     username: '',
     imageUrl: '',
   });
+  const {
+    name,
+    imageUrl,
+    description,
+    instructions,
+    category,
+    username,
+  } = inputsValues;
   const clearState = () => {
     setInputsValues({
       ...inputsValues,
@@ -25,14 +33,6 @@ const AddRecipe = (props) => {
       username: '',
     });
   };
-  const {
-    name,
-    imageUrl,
-    description,
-    instructions,
-    category,
-    username,
-  } = inputsValues;
   const handleChange = (name) => (e) => {
     setInputsValues({ ...inputsValues, [name]: e.target.value });
   };

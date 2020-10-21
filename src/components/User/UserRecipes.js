@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import { Mutation } from 'react-apollo';
@@ -37,6 +37,7 @@ const UserRecipes = () => {
                   return (
                     <React.Fragment>
                       <h3>Your Recipes</h3>
+
                       {!data.getUserRecipes.length && (
                         <p>you have not added any recipes</p>
                       )}
@@ -98,7 +99,7 @@ const UserRecipes = () => {
                             </div>
                             <div className="col-md-4">
                               <button className="btn btn-warning">
-                                Update
+                                <Link to={`/edit/${recipe._id}`}>Update</Link>
                               </button>
                             </div>
                           </div>
