@@ -23,7 +23,7 @@ import {
 } from 'react-router-dom';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'https://react-graphql-recipes-app.herokuapp.com/graphql',
   fetchOptions: {
     credentials: 'include',
   },
